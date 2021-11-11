@@ -5,7 +5,7 @@ Foi utilizado na aplicação
 - node-sass
 - react-rout-dom
 - axios
-- -context api
+- context api
 
 Link da aplicação: https://hud-mealsapp.netlify.app/
 
