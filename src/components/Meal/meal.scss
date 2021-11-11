@@ -1,0 +1,52 @@
+.meal {
+    background: black;
+    color: white;
+    padding: 4rem 0;
+    
+    .container {
+        .meal {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            img {
+                width: 100%;
+                max-width: 350px;
+                border-radius: 5px;
+                border: 1px solid #CCC;
+            }
+            button {
+                margin-top: 2rem;
+                outline: none;
+                cursor: pointer;
+                font-size: 1.4rem;
+                padding: .5rem 1rem;
+                background: transparent;
+                color: white;
+                border: 1px solid #CCC;
+                border-radius: 5px;
+                font-weight: bold;
+                transition: 0.4s ease;
+                &:hover {
+                    background: white;
+                    color: black;
+                }
+            }
+            h4 {
+                font-size: 1.8rem;
+                margin-top: 2rem;
+                color: #F3B542;
+            }
+            .instructions {
+                h5 {
+                    font-size: 1.4rem;
+                }
+                p {
+                    font-size: 1.2rem;
+                    margin-top: 1rem;
+                    line-height: 150%;
+                }
+            }
+        }
+    }
+}
