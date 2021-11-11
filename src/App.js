@@ -13,8 +13,8 @@ function App() {
       <BrowserRouter>
         <Navbar />
           <Routes>
-            <Route exact path="/" element={<HomePage />}></Route>
-            <Route exact path="/categories" element={<Categories />}></Route>
+            <Route exact path="/" active="active" element={<HomePage />}></Route>
+            <Route exact path="/categories" active="active" element={<Categories />}></Route>
             <Route exact path="/random" element={<RandomMeal />}></Route>
             <Route exact path="/meal/:id" element={<Meal />}></Route>
           </Routes>
