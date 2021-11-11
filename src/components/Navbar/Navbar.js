@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import './navbar.scss';
 import Container from "../Container/Container";
 
@@ -11,9 +11,9 @@ export default function Navbar() {
                 </div>
                 <div className="navbar-links">
                     <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/categories">Categories</Link></li>
-                    <li><Link to="/random">Random</Link></li>
+                        <li><NavLink to="/" activeClassName="active">Home</NavLink></li>
+                        <li><NavLink  to="/categories" activeClassName="active">Categories</NavLink></li>
+                        <li><NavLink  to="/random" activeClassName="active">Random</NavLink></li>
                     </ul>
                 </div>
             </Container>
