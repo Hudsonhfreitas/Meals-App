@@ -12,7 +12,7 @@ export default function Navbar() {
                 <div className="navbar-links">
                     <ul>
                     <li><Link to="/">Home</Link></li>
-                    <li><Link to="/catgories">Categories</Link></li>
+                    <li><Link to="/categories">Categories</Link></li>
                     <li><Link to="/random">Random</Link></li>
                     </ul>
                 </div>

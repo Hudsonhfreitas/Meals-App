@@ -6,7 +6,7 @@ import './homePage.scss';
 
 export default function HomePage() {
     const [searchTerm, setSearchTerm] = useState("");
-    const { fetchHomePageMeals } = useContext(myContext);
+    const { fetchHomePageMeals, meals } = useContext(myContext);
 
     const fetchMealsHandler = useCallback(() => {
         fetchHomePageMeals(searchTerm);
@@ -15,12 +15,17 @@ export default function HomePage() {
     return (
         <div className="home">
             <Container>
-                <div className="home-container">
+                <div className="home-search">
                     <input type="text" placeholder="Type a meal" value={searchTerm} onChange={e => setSearchTerm(e.target.value)}/>
-                    <button onClick={fetchMealsHandler}>Seach Meal</button>
+                    <button onClick={fetchMealsHandler}>Search Meal</button>
                 </div>
-                <div className="home-meals">
-
+                <div className="home-grid">
+                    {meals ? meals.map(meal => (
+                        <div key={meal.idMeal} className="home-meals">
+                            <img src={meal.strMealThumb} alt={meal.strMeal} />
+                            <h4>{meal.strMeal}</h4>
+                        </div>
+                    )) : <h2>No meals found! Try another word...</h2>}
                 </div>
             </Container>
         </div>

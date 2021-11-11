@@ -1,0 +1,25 @@
+.categories {
+    background: black;
+    color: white;
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 250px));
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        padding: 4rem;
+        .category {
+            font-size: 1.4rem;
+            text-align: center;
+            img {
+                transition: all 0.4s ease;
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+            h4 {
+                margin-top: 2rem;
+            }
+        }
+    }
+}

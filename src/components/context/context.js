@@ -10,10 +10,23 @@ export default function AppContext({children}) {
 
     const fetchHomePageMeals = useCallback((searchTerm) => {
         axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchTerm}`)
-        .then(response => console.log(response.data.meals))
+        .then(response => {
+            setMeals(response.data.meals)
+        })
     },[])
+
+    const fetchCategories = useCallback(() => {
+        axios.get(`https://www.themealdb.com/api/json/v1/1/categories.php`)
+        .then(response => setCategories(response.data.categories))
+    },[])
+
+    const fetchRandom = useCallback(() => {
+        axios.get(`https://www.themealdb.com/api/json/v1/1/random.php`)
+        .then(res => setRandomMeal(res.data.meals))
+    },[])
+
     return (
-        <myContext.Provider value={{fetchHomePageMeals}}>
+        <myContext.Provider value={{fetchHomePageMeals, fetchCategories, fetchRandom, categories, meals, randomMeal}}>
             {children}
         </myContext.Provider>
     )
