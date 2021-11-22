@@ -1,6 +1,6 @@
 # Meals App
 
-Aplicação criada para consulta de receitas utilizando a API do https://www.themealdb.com/. É possível buscar por uma determinada receita, visualizar categorias e visualizar uma receitar aleatória. <br/>
+Aplicação criada para consulta de receitas utilizando a API do https://www.themealdb.com/. É possível buscar por uma determinada receita, visualizar categorias e visualizar uma receita aleatória. <br/>
 # Foi utilizado na aplicação
 - node-sass
 - react-rout-dom
